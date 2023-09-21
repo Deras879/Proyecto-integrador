@@ -1,0 +1,103 @@
+/* .container{
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00f, 0 0 70px #00f, 0 0 80px #00f, 0 0 100px #00f, 0 0 150px #00f;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  } */
+
+
+  .name {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    font-weight: 600;
+    transform: translate(0px, -220%);
+    font-weight: bold;
+    background-color: rgb(255, 30, 0);
+
+    border-radius: 8px;
+
+  }
+  .status {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  .species {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  .gender {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  .origin {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+
+
+.img{
+    max-width: 100%;
+    height: auto;
+}
+
+  .container {
+    position: relative;
+    max-height: 300px;
+    max-width: 200px; /* Establece el ancho máximo que deseas para el contenedor */
+    margin: 0; /* Centra el contenedor en la página */
+    padding: 10px;
+    background-image: url(https://e1.pxfuel.com/desktop-wallpaper/582/799/desktop-wallpaper-rick-and-morty-backround-posted-by-ethan-mercado-rick-and-morty-portal.jpg);
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    top: -5px; /* Ajusta según tu diseño */
+    left: -5px; /* Ajusta según tu diseño */
+    right: -5px; /* Ajusta según tu diseño */
+    bottom: -5px; /* Ajusta según tu diseño */
+    box-shadow: 0 0 10px #025701, 0 0 20px #0a7513, 0 0 30px #29992f, 0 0 40px rgb(94, 179, 89), 0 0 70px rgb(130, 230, 113), 0 0 80px rgb(3, 255, 41), 0 0 100px #00f, 0 0 150px #00f;
+    animation: glow .7s infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

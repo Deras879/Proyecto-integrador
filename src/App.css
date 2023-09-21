@@ -1,3 +1,9 @@
 .App {
    text-align: center;
+   background-image: url("https://t3.ftcdn.net/jpg/04/33/97/40/360_F_433974069_A9k90WBFoQeDPekzKGOmPYCFaqqgOm4O.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100vw;
+   height: 100vh;
+   margin: 0;
 }

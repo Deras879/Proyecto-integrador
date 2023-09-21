@@ -23,6 +23,7 @@ export default [
          url: 'https://rickandmortyapi.com/api/location/1',
       },
       image: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+
    },
    {
       id: 2,
