@@ -1,9 +1,16 @@
 .container{
-    margin: 0;
+    padding-top: 50px;
+    margin: 0px;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
+    justify-content: stretch;
     /* background-image: url("https://t3.ftcdn.net/jpg/04/33/97/40/360_F_433974069_A9k90WBFoQeDPekzKGOmPYCFaqqgOm4O.jpg"); */
+    width: 100%;
+    flex-wrap: wrap;
+}
 
+.card{
+    flex: 1;
+    min-width: 200px;
+    margin: 30px;
+    box-sizing: border-box;
 }

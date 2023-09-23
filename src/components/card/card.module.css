@@ -12,7 +12,7 @@
     }
   } */
 
-
+ 
   .name {
     position: absolute;
     color: rgb(0, 0, 0);
@@ -25,7 +25,7 @@
     border-radius: 8px;
 
   }
-  .status {
+  /* .status {
     position: absolute;
     right: 0%;
     width: 0%;
@@ -64,33 +64,66 @@
     font-size: 1.2em;
     font-weight: 600;
     transition-duration: .3s;
-  }
+  } */
 
 
 .img{
     max-width: 100%;
     height: auto;
+    margin: 0;
+    padding: 0;
+    transform: translateY(5px);
 }
 
   .container {
+    box-sizing: border-box;
+    border: 5px solid black;
     position: relative;
     max-height: 300px;
     max-width: 200px; /* Establece el ancho máximo que deseas para el contenedor */
-    margin: 0; /* Centra el contenedor en la página */
-    padding: 10px;
+    margin: 10px; /* Centra el contenedor en la página */
+    padding: 0;
     background-image: url(https://e1.pxfuel.com/desktop-wallpaper/582/799/desktop-wallpaper-rick-and-morty-backround-posted-by-ethan-mercado-rick-and-morty-portal.jpg);
+    transition:all .3s ease;
   }
   
   .container::before {
     content: "";
     position: absolute;
-    top: -5px; /* Ajusta según tu diseño */
-    left: -5px; /* Ajusta según tu diseño */
-    right: -5px; /* Ajusta según tu diseño */
-    bottom: -5px; /* Ajusta según tu diseño */
+    top: -3px; 
+    left: -3px;
+    right: -3px;
+    bottom: -3px; 
     box-shadow: 0 0 10px #025701, 0 0 20px #0a7513, 0 0 30px #29992f, 0 0 40px rgb(94, 179, 89), 0 0 70px rgb(130, 230, 113), 0 0 80px rgb(3, 255, 41), 0 0 100px #00f, 0 0 150px #00f;
-    animation: glow .7s infinite alternate;
+    animation: glow 1s infinite alternate;
   }
+
+  .container:hover{
+    max-width: 300px;
+    max-height: 400px;
+    animation: normal;
+    transition-duration: .3s;
+  }
+
+  .container:hover .info{
+    opacity: 1;
+    transform: translateY(-100%);
+    transition-duration: .3s;
+
+  }
+  .container:hover .btn{
+    transform: translateX(300px);
+  }
+  
+  .info {
+    position: absolute;
+    background-color: rgba(173, 173, 173, 0.37);
+    opacity: 0;
+    width: 100%;
+    height: 86%;
+    transform: translateY(-100%);
+  }
+
   
   @keyframes glow {
     from {

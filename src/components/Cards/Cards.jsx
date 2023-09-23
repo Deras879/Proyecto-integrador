@@ -3,8 +3,10 @@ import style from "./Cards.module.css"
 
 export default function Cards(props) {
    return <div className={style.container}>
-      {props.characters.map((character) => {
-         return(<Card           
+      {props.characters.map((character, index) => {
+         return(<Card    
+            className={style.card}     
+            key={index + 1}
             id={character.id}
             name={character.name}
             status={character.status}
@@ -13,7 +15,7 @@ export default function Cards(props) {
             origin={character.origin.name}
             image={character.image}
             png={character.png}
-            onClose={() => window.alert('Emulamos que se cierra la card')}/>);
+            onClose={props.onClose}/>);
       })}
       
    </div>;

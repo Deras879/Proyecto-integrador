@@ -1,0 +1,13 @@
+.container{
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.input{
+    height: 28px;
+    margin-right: 5px;
+    box-shadow: 3px;
+    background-color: beige;
+}
