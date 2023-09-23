@@ -3,7 +3,7 @@ import SearchBar from "../SearchBar/SearchBar"
 
 function Nav (props) {
     return <div>
-            <SearchBar onSearch={props.onSearch}/>
+            <SearchBar onSearch={props.onSearch} onRandom={props.onRandom}/>
     </div>
 
 }

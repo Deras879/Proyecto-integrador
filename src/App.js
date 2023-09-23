@@ -1,7 +1,7 @@
 import './App.css';
 // import Card from './components/card/Card.jsx';
 import Cards from './components/Cards/Cards.jsx';
-import SearchBar from './components/SearchBar/SearchBar.jsx';
+// import SearchBar from './components/SearchBar/SearchBar.jsx';
 // import characters from './data.js';
 import Nav from "./components/Nav/Nav"
 import { useState } from 'react';
@@ -14,13 +14,27 @@ function App() {
    const [characters, setCharacters] = useState([])
 
 const onSearch = function (id) {
-   axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) =>{
-      if(data.name){
-         setCharacters([...characters, data])
-      } else{
-         window.alert("No hay personaje con ese ID!")
-      }
-   })
+   const characterExist = characters.find(character => character.id === parseInt(id))
+   if(characterExist){
+      window.alert("Ya existe ese personaje!")
+   }else{
+      axios(`https://rickandmortyapi.com/api/character/${id}`)
+      .then(({ data }) =>{
+         if(data.name){
+           setCharacters([...characters, data])
+       } else{
+          window.alert("No hay personaje con ese ID!")
+       }
+    })
+      .catch(error => {
+         window.alert("No hay personaje con ese ID")
+      })
+   } 
+}
+
+const onRandom = () => {
+   let randomId = Math.floor(Math.random() * 826 + 1)
+   onSearch(randomId);
 }
 
 
@@ -32,8 +46,8 @@ const onClose = (id) => {
    return (
       <div className='App'>
          {/* <SearchBar onSearch={(characterID) => window.alert(characterID)}/> */}
-         <Nav onSearch={onSearch}/>
-         <Cards characters={characters} onClose={onClose} />
+         <Nav onSearch={onSearch} onRandom={onRandom}/>
+         <Cards characters={characters} onClose={onClose}  />
 
       </div>
    );
