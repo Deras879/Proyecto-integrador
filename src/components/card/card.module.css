@@ -125,9 +125,11 @@
     /* transform: translateY(-100%); */
   }
 
-  .info:hover {
-
+  .link{
+    text-decoration: none;
+    color: black;
   }
+
 
   
   @keyframes glow {
