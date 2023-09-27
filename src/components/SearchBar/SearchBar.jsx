@@ -23,7 +23,7 @@ export default function SearchBar(props) {
    }
    return (
       <div className={style.container}>
-         <input className={style.input} value={id} type="text"  onChange={handleChange} onKeyDown={handleKey}/>
+         <input className={style.input} placeholder="Introduzca un ID" value={id} type="text"  onChange={handleChange} onKeyDown={handleKey}/>
          <button className={style.btn} onClick={() => handleClick()}>Agregar</button>
          <button className={style.btn} onClick={() => props.onRandom()}>Random</button>
       </div>
