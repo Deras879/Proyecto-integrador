@@ -1,9 +1,17 @@
 import React from "react"
+// import { useEffect, useState } from "react";
 import SearchBar from "../SearchBar/SearchBar"
-import { Link } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 import style from "./Nav.module.css"
 
 function Nav (props) {
+
+    const location = useLocation();
+    const rutaValida = /^\/(home|favorites|about|(detail\/\d+))$/;
+
+    if (!rutaValida.test(location.pathname)){
+        return null;
+    }
     return(
      <div className={style.container}>
         <div>
@@ -24,4 +32,5 @@ function Nav (props) {
 
 )}
 
+// export default Nav;
 export default Nav;

@@ -33,8 +33,8 @@ const Detail = () => {
                 <h2 className={style.gender}>Gender: {character.gender}</h2>
                 <h2 className={style.origin}>Origin: {character.origin.name}</h2>
             </div>
-            <div>
-                <img className={style.img} src={character.image} alt="" />
+            <div className={style.neonEffect}>
+                    <img className={style.img} src={character.image} alt="" />
             </div>
      
         </div>

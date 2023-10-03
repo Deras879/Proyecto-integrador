@@ -1,0 +1,8 @@
+.container{
+
+    height: 100vh;
+    max-width: 100vw;
+    background-image: url("https://shots.codepen.io/username/pen/ZjLwYz-800.jpg?version=1532655820");
+    background-size: cover;
+    background-position-x: -90px;
+}

@@ -36,7 +36,7 @@
 
 }
 .name:hover {
-    color: green;
+    color: rgb(227, 121, 241);
     cursor: default;
     font-size: 3.5em;
 }
@@ -108,6 +108,17 @@
     opacity: 1;
   }
 }
-.img{
+
+.img {
+
     border-radius: 50%;
+}
+
+p{
+    font-size: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    transform: translateY(250%);
 }
