@@ -169,6 +169,8 @@
     bottom: -3px; 
     box-shadow: 0 0 10px #025701, 0 0 20px #0a7513, 0 0 30px #29992f, 0 0 40px rgb(94, 179, 89), 0 0 70px rgb(130, 230, 113), 0 0 80px rgb(3, 255, 41), 0 0 100px #00f, 0 0 150px #00f;
     animation: glow 1s infinite alternate;
+    pointer-events: none;
+
   }
 
   .container:hover{

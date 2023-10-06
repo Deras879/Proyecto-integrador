@@ -27,7 +27,7 @@ function Nav (props) {
 
         </div>
  
-            <SearchBar onSearch={props.onSearch} onRandom={props.onRandom}/>
+            <SearchBar onSearch={props.onSearch} onRandom={props.onRandom} logOut={props.logOut}/>
     </div>
 
 )}

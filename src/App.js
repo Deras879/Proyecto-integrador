@@ -12,6 +12,7 @@ import Nav from "./components/Nav/Nav"
 import { useEffect, useState, } from 'react';
 import axios from "axios"
 import {Routes, Route, useNavigate } from 'react-router-dom';
+import Favorites from './components/Favorites/Favorites';
 
 
 
@@ -38,6 +39,10 @@ function App() {
       !access && navigate("/");
    },[access]);
 
+   const logOut = () => {
+      setAccess(false);
+      console.log("se setea el acces en false");
+   }
    const [characters, setCharacters] = useState([])
 
 const onSearch = function (id) {
@@ -74,16 +79,17 @@ const onClose = (id) => {
 
       <div className='App'>
          {/* <SearchBar onSearch={(characterID) => window.alert(characterID)}/> */}
-      <Nav onSearch={onSearch} onRandom={onRandom}/>
+      <Nav onSearch={onSearch} onRandom={onRandom} logOut={logOut}/>
          <Routes>
          {/* <Route path={["/home", "/about", "/detail/:id"]} element={<Nav onSearch={onSearch} onRandom={onRandom}/>}/> */}
 
             {/* <Route path='/' element={<OutletRoutes />} /> */}
-            <Route path='/home' element=<Home characters={characters} onClose={onClose} /> />
             <Route path="/" element=<Form onLogin={login}/> />
+            <Route path='/home' element=<Home characters={characters} onClose={onClose} /> />
             <Route path="/about" element=<About/> />
             <Route path='/detail/:id' element=<Detail/> />
             <Route path="*" element={<Error404 />} />
+            <Route path="/favorites" element={<Favorites />}/>
          </Routes>
         
 

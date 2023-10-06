@@ -1,17 +1,50 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import style from "./card.module.css"
 // import Boton from "../Button/Button.jsx"
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addFav, removeFav } from "../../redux/actions";
 
 
 
 export default function Card(props) {
-   return (
+   const myFavorites = useSelector((state) => state.myFavorites)
+   const dispatch = useDispatch()
 
-      
+
+   const [isFav, setIsFav] = useState(false);
+
+const handleFavorite = () =>{
+   if(isFav) {
+      setIsFav(false)
+      dispatch(removeFav(props.id));
+   }else{
+      setIsFav(true)
+      dispatch(addFav(props.id));
+   }
+
+}
+
+useEffect(() => {
+ for(let i = 0; i < myFavorites.length; i++){
+   if(myFavorites[i].id === props.id){
+      setIsFav(true)
+   }
+ }
+}, [myFavorites]);
+
+   return (
   
-        <div className={style.container}>
+      
+      
+      <div className={style.container}>
            {/* <Boton className={style.Btn} onClick={() => props.onClose(props.id)}/> */}
+           {isFav ? (
+  <button onClick={handleFavorite}>❤️</button>
+) : (
+  <button onClick={handleFavorite}>🤍</button>
+)}
 
            <button className={style.Btn}  onClick={() => props.onClose(props.id)}>
   
@@ -43,7 +76,5 @@ export default function Card(props) {
 
    );
 }
-
-
 
 
