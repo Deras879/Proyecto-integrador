@@ -1,0 +1,19 @@
+.text{
+    color: antiquewhite;
+}
+
+.container{
+    padding-top: 50px;
+    margin: 0px;
+    display: flex;
+    justify-content: stretch;
+    /* background-image: url("https://t3.ftcdn.net/jpg/04/33/97/40/360_F_433974069_A9k90WBFoQeDPekzKGOmPYCFaqqgOm4O.jpg"); */
+    /* height: 100%; */
+    flex-wrap: wrap;
+    background-image: url("https://i.ytimg.com/vi/cDrhRPXLaIU/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gJyhoMA8=&rs=AOn4CLD0cOch7sE2YOgG_DY5OiaB-t6MXA");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 87.3vh;
+    margin: 0;
+}

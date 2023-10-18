@@ -1,0 +1,63 @@
+.btn {
+    --bg: #000000;
+    --hover-bg: #ff90e8;
+    --hover-text: #000;
+    color: #ffffff;
+    border: 1px solid var(--bg);
+    border-radius: 4px;
+    padding: 0.8em 2em;
+    background: var(--bg);
+    transition: 0.2s;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem,-0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg);
+  }
+  
+  .btn:active {
+    transform: translate(0);
+    box-shadow: none;
+  }
+
+  .container{
+    background-image: url("https://c.wallhere.com/photos/7a/a1/planet_night_isolation_clouds_sky_lanterns_space_Lost_Planet-2115.png!d");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin: 0px;
+    width: 100vw;
+    justify-content: space-between;
+    position: relative;
+    /* box-shadow: 0 0 10px #025701, 0 0 20px #0a7513, 0 0 30px #29992f, 0 0 40px rgb(94, 179, 89), 0 0 70px rgb(130, 230, 113), 0 0 80px rgb(3, 255, 41), 0 0 100px #00f, 0 0 150px #00f;
+    animation: glow 1s infinite alternate; */
+    /* overflow: hidden; */
+    box-sizing: border-box;
+  }
+
+  .container::before {
+    content: "";
+    position: absolute;
+    top: -3px; 
+    left: 0px;
+    right: 0px;
+    bottom: -3px; 
+    box-shadow: 0 0 3px #570101, 0 0 5px #850e0e, 0 0 7px #992929, 0 0 10px rgb(179, 89, 89), 0 0 17px rgb(230, 113, 113), 0 0 20px rgb(255, 3, 3), 0 0 25px rgb(255, 106, 106), 0 0 150px #00f;
+    animation: glow .5s infinite alternate;
+    pointer-events: none;
+  }
+
+    
+  @keyframes glow {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
