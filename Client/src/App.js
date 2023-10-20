@@ -30,7 +30,6 @@ function App() {
    const login = (userData) => {
       if(userData.email === EMAIL && userData.password === PASSWORD){
          setAccess(true);
-         console.log("se setea el acces a true");
          navigate("/home");
       }
    }
@@ -41,9 +40,9 @@ function App() {
 
    const logOut = () => {
       setAccess(false);
-      console.log("se setea el acces en false");
    }
    const [characters, setCharacters] = useState([])
+
 
 const onSearch = function (id) {
    const characterExist = characters.find(character => character.id === parseInt(id))

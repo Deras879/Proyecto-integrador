@@ -20,8 +20,6 @@ const Form = ({onLogin}) => {
 
         const handleSubmit = (e) => {
             e.preventDefault()
-            console.log("si se ejecuta");
-            console.log(onLogin);
             onLogin(userData)
         }
 
