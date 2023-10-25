@@ -15,7 +15,6 @@ import {Routes, Route, useNavigate } from 'react-router-dom';
 import Favorites from './components/Favorites/Favorites';
 
 
-
 function App() {
    const [access, setAccess] = useState(false)
 
