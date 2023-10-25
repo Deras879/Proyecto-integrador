@@ -4,6 +4,8 @@
 
     flex-wrap: wrap;
     background-image: url("https://images.alphacoders.com/133/thumb-1920-1330376.png");
+    background-color: rgba(99, 161, 223, 0.664); /* 0.5 representa la opacidad del fondo blanco */
+  background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;

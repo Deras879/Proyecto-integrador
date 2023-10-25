@@ -7,6 +7,8 @@
     display: flex;
     justify-content: center;
     background-image: url("https://i.ytimg.com/vi/w26m0KzvZy4/maxresdefault.jpg");
+    background-color: rgba(36, 85, 49, 0.531); /* 0.5 representa la opacidad del fondo blanco */
+  background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
 }
