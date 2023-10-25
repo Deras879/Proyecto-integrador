@@ -1,0 +1,15 @@
+.container{
+    padding-top: 5px;
+    margin: 0px;
+
+    flex-wrap: wrap;
+    background-image: url("https://images.alphacoders.com/133/thumb-1920-1330376.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 92.5vh;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+}

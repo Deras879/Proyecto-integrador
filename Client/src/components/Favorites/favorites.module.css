@@ -1,0 +1,27 @@
+.container{
+    padding-top: 5px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+    /* background-image: url("https://t3.ftcdn.net/jpg/04/33/97/40/360_F_433974069_A9k90WBFoQeDPekzKGOmPYCFaqqgOm4O.jpg"); */
+    /* height: 100%; */
+    flex-wrap: wrap;
+    background-image: url("https://i.ytimg.com/vi/CkeZVqUBSz4/maxresdefault.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 92.5vh;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.orden {
+    font-size: 2em;
+}
+
+.tipo {
+    font-size: 2em;
+}
+

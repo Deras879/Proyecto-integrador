@@ -1,18 +1,20 @@
 .container{
-    padding-top: 50px;
+    /* padding-top: 50px; */
     margin: 0px;
     display: flex;
     justify-content: stretch;
     /* background-image: url("https://t3.ftcdn.net/jpg/04/33/97/40/360_F_433974069_A9k90WBFoQeDPekzKGOmPYCFaqqgOm4O.jpg"); */
-    /* height: 100%; */
+    max-height: 100%;
+    max-width: 100vw;
     flex-wrap: wrap;
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d3e732db-c007-40d9-b253-a618437c4faa/dapjdy0-155dbf6c-2fed-4d6d-9dff-bd01339fee29.png/v1/fill/w_1192,h_670,q_70,strp/rick_and_morty_wallpaper_by_lvsh62_dapjdy0-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2QzZTczMmRiLWMwMDctNDBkOS1iMjUzLWE2MTg0MzdjNGZhYVwvZGFwamR5MC0xNTVkYmY2Yy0yZmVkLTRkNmQtOWRmZi1iZDAxMzM5ZmVlMjkucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.WAczX553POIznBkXxuEg3yhBI4Tq2IIIgG_TP-yRLwM");
+    /* background-image: url("https://images -wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d3e732db-c007-40d9-b253-a618437c4faa/dapjdy0-155dbf6c-2fed-4d6d-9dff-bd01339fee29.png/v1/fill/w_1192,h_670,q_70,strp/rick_and_morty_wallpaper_by_lvsh62_dapjdy0-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTA4MCIsInBhdGgiOiJcL2ZcL2QzZTczMmRiLWMwMDctNDBkOS1iMjUzLWE2MTg0MzdjNGZhYVwvZGFwamR5MC0xNTVkYmY2Yy0yZmVkLTRkNmQtOWRmZi1iZDAxMzM5ZmVlMjkucG5nIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.WAczX553POIznBkXxuEg3yhBI4Tq2IIIgG_TP-yRLwM"); */
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
-    height: 92.5vh;
+    /* width: 100vw;
+    height: 92.5vh; */
     margin: 0;
     box-sizing: border-box;
+
 }
 
 .card{

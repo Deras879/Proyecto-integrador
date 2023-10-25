@@ -189,7 +189,7 @@
 
   .container:hover .name{
     font-size: 1.8em;
-    transform: translate(30%, -12px);
+    transform: translate(30%, -65px);
   }
 
   .container:hover .Btn{
