@@ -19,9 +19,10 @@ const handleFavorite = () =>{
    if(isFav) {
       setIsFav(false)
       dispatch(removeFav(props.id));
+      console.log(props.id);
    }else{
       setIsFav(true)
-      dispatch(addFav(props.id));
+      dispatch(addFav(props));
    }
 
 }
