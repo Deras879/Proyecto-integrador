@@ -8,7 +8,7 @@ const login = (req, res) => {
         const user = users.find((us) => us.email === email && us.password === password)
 
         if(user){
-            res.status(200).json({acces: true})
+            res.status(200).json({access: true})
         }else{
             res.status(200).json({access: false})
         }

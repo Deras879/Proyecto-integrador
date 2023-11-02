@@ -16,7 +16,7 @@ const deleteFav = (req,res) => {
     const {id} = req.params;
 
     if(id){
-        myFavorites.filter((fav) => fav.id !== Number(id));
+        myFavorites = myFavorites.filter((fav) => fav.id !== Number(id));
 
         res.status(200).json(myFavorites);
     }else{
