@@ -22,31 +22,57 @@ const URL = "https://rickandmortyapi.com/api/character/"
 
 
 
-const getCharById = (req, res) => {
+const getCharById = async (req, res) => {
     const {id} = req.params;
-    axios(URL + id)
-    .then(({data}) => {
-        const {name, id, status, species, origin, image, gender} = data
-       return  char = {
-            id,
-            name,
-            status,
-            species,
-            origin,
-            image,
-            gender
-        }
-    })
-    .then((data)=> {
-        if(data){
-            res.status(200).json(data)
-        }else{
-            res.status(400).send("Error 404, Not found")
-        }
-    })
-    .catch((err) => {
-        res.status(500).send(err.message)
-    })
+
+    try {
+       await axios(URL + id)
+        .then(({data}) => {
+            const {name, id, status, species, origin, image, gender} = data
+           return  char = {
+                id,
+                name,
+                status,
+                species,
+                origin,
+                image,
+                gender
+            }
+        })
+        .then((data)=> {
+            if(data){
+                res.status(200).json(data)
+            }else{
+                throw Error("Error 404, Not found")
+            }
+        })
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
 }
+//     axios(URL + id)
+//     .then(({data}) => {
+//         const {name, id, status, species, origin, image, gender} = data
+//        return  char = {
+//             id,
+//             name,
+//             status,
+//             species,
+//             origin,
+//             image,
+//             gender
+//         }
+//     })
+//     .then((data)=> {
+//         if(data){
+//             res.status(200).json(data)
+//         }else{
+//             res.status(400).send("Error 404, Not found")
+//         }
+//     })
+//     .catch((err) => {
+//         res.status(500).send(err.message)
+//     })
+// }
 
 module.exports = getCharById;
