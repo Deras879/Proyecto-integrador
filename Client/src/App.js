@@ -17,6 +17,7 @@ import Favorites from './components/Favorites/Favorites';
 
 function App() {
    const [access, setAccess] = useState(false)
+   const URL = "http://localhost:3001/rickandmorty";
 
 
    const EMAIL = "derycard59@gmail.com"
@@ -34,14 +35,33 @@ function App() {
    // }
 
 
-   const login = (userData) => {
-      const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
-         const { access } = data;
-         setAccess(data);
-         access && navigate('/home');
-      });
+   // const login = (userData) => {
+   //    const { email, password } = userData;
+
+   //    axios(URL +/login/ + `?email=${email}&password=${password}`).then(({ data }) => {
+   //       const { access } = data;
+   //       setAccess(data);
+   //       access && navigate('/home');
+   //    });
+   // }
+
+
+   const login = async (userData) => {
+      const {email, password} = userData;
+      try {
+        await axios(URL +/login/ + `?email=${email}&password=${password}`)
+         .then(({ data }) => {
+             const { access } = data;
+             if(access === false){
+               throw Error("Credenciales invalidas!")
+             }
+                setAccess(data);
+                  access && navigate('/home');
+               });
+      } catch (error) {
+         window.alert(error.message)
+      }
+
    }
 
    useEffect(() => {
@@ -54,23 +74,45 @@ function App() {
    const [characters, setCharacters] = useState([])
 
 
-const onSearch = function (id) {
-   const characterExist = characters.find(character => character.id === parseInt(id))
+// const onSearch = function (id) {
+//    const characterExist = characters.find(character => character.id === parseInt(id))
+//    if(characterExist){
+//       window.alert("Ya existe ese personaje!")
+//    }else{
+//       axios(`http://localhost:3001/rickandmorty/character/${id}`)
+//       .then(({ data }) =>{
+//          if(data.name){
+//            setCharacters([...characters, data])
+//        } else{
+//           window.alert("No hay personaje con ese ID!")
+//        }
+//     })
+//       .catch(error => {
+//          window.alert("No hay personaje con ese ID")
+//       })
+//    } 
+// }
+
+
+const onSearch = async (id) => {
+   const characterExist = characters.find(character => character.id === Number(id));
+   
    if(characterExist){
       window.alert("Ya existe ese personaje!")
    }else{
-      axios(`http://localhost:3001/rickandmorty/character/${id}`)
-      .then(({ data }) =>{
-         if(data.name){
-           setCharacters([...characters, data])
-       } else{
-          window.alert("No hay personaje con ese ID!")
-       }
-    })
-      .catch(error => {
-         window.alert("No hay personaje con ese ID")
-      })
-   } 
+      try {
+        await axios(`${URL}/character/${id}`)
+       .then(({ data }) =>{
+            if(data.name){
+               setCharacters([...characters, data])
+            }else{
+               throw Error("No hay personaje con ese ID!")
+            }
+         });
+      } catch (error) {
+         window.alert("No hay personaje con ese ID!")
+      }
+   }
 }
 
 const onRandom = () => {
