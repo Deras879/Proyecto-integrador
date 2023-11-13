@@ -23,6 +23,7 @@ const server = express();
 const PORT = 3001;
 const Routes = require("./routes/index");
 
+
 server.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Credentials', 'true');
@@ -42,6 +43,4 @@ server.use((req, res, next) => {
  server.use("/rickandmorty", Routes)
 
 
-server.listen(PORT, () => {
-    console.log(`server levantado en el puerto ${PORT}`);
-})
+module.exports = server;
