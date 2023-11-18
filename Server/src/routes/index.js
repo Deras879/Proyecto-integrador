@@ -14,6 +14,6 @@ Routes.get("/login", (req, res) => login(req, res));
 Routes.post("/fav", (req, res) => postFav(req, res));
 Routes.delete("/fav/:id", (req, res) => deleteFav(req, res));
 
-Routes.post("/user", (req, res) => postUser(req, res));
+Routes.post("/login", (req, res) => postUser(req, res));
 
 module.exports = Routes;

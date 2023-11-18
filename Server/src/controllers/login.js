@@ -30,9 +30,9 @@ const login = async (req, res) => {
       res.status(404).send("Usuario no encontrado");
     } else {
       if (user[0].password !== password) {
-        res.status(403).send("Contraseña incorrecta");
+        res.status(403).send("Contraseña o usuario invalidos");
       } else {
-        res.status(200).json({ acces: true });
+        res.status(200).json({ access: true });
       }
     }
   } catch (error) {
