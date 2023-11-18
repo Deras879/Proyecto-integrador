@@ -8,6 +8,11 @@ const postFav = async (req, res) => {
   }
 
   try {
+    const fav = await Favorite.findAll({ where: { name, status } });
+
+    if (fav[0]) {
+      return res.status(400).send("El personaje ya es un favorito");
+    }
     await Favorite.create({ name, origin, status, image, species, gender });
 
     const favs = await Favorite.findAll();

@@ -4,6 +4,7 @@ const login = require("../controllers/login");
 const postUser = require("../controllers/postUser");
 // const {postFav, deleteFav} = require("../controllers/handleFavorites");
 const postFav = require("../controllers/postFav");
+const deleteFav = require("../controllers/deleteFav");
 
 const Routes = express.Router();
 
